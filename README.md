@@ -101,6 +101,51 @@ CSA(p,q) = d_topology(p,q) + λ d_spatial(p,q)
 
 allowing features to be matched based on both topology and image location.
 
+## Example Results
+
+The following figures illustrate the qualitative performance of the proposed topology-aware segmentation framework across road extraction, crack detection, biomedical microscopy segmentation, and retinal vessel segmentation tasks.
+
+Predictions demonstrate strong preservation of connectivity, branching structures, and topological consistency when compared with ground-truth annotations.
+
+### Road Network Segmentation
+
+The Hybrid + SATLoss (Creator + Destroyer) model preserves road connectivity while maintaining accurate road geometry.
+
+![Road Segmentation](results/figures/road_hybrid_satloss_cd_prediction.png)
+
+---
+
+### Crack Segmentation Comparison
+
+Comparison of BCE, SATLoss, Hybrid, and topology-aware models on crack segmentation.
+
+![Crack Segmentation](results/figures/crack_all_models_comparison.png)
+
+---
+
+### C. elegans Transfer Learning Results
+
+Transfer learning from topology-aware road segmentation to biomedical microscopy image segmentation.
+
+![C. elegans Segmentation](results/figures/celegans_predictions.png)
+
+---
+
+### DRIVE Retinal Vessel Patch Predictions
+
+Patch-level retinal vessel segmentation using the transferred topology-aware model.
+
+![DRIVE Patch Predictions](results/figures/drive_patch_predictions.png)
+
+---
+
+### DRIVE Full Retinal Vessel Prediction
+
+Full-image retinal vessel reconstruction obtained by merging overlapping patch predictions.
+
+![DRIVE Full Prediction](results/figures/drive_full_prediction.png)
+
+
 ---
 
 ## Datasets
